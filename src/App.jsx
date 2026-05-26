@@ -1,8 +1,79 @@
+import Card from "./components/Card.jsx";
+
 export default App;
 function App() {
   return (
     <>
       <div className="wrapper clear">
+        <div style={{ display: "none" }} className="overlay">
+          <div className="drawer">
+            <h2 className="mb-30 d-flex justify-between cu-p">
+              Корзина
+              <img
+                className="removeBtn"
+                src="/icons/buttonRemove.svg"
+                alt="Remove"
+              />
+            </h2>
+            <div className="items">
+              <div className="cartItem d-flex align-center mb-20">
+                <div
+                  style={{
+                    backgroundImage:
+                      "url(../public/img/sneakers/nikeAirMax270.jpg)",
+                  }}
+                  className="cartItemImg"
+                ></div>
+                <div className="mr-20 flex">
+                  <p className="mb-5">Мужские Кроссовки Nike Air Max 270</p>
+                  <b>12 999 ₴</b>
+                </div>
+                <img
+                  className="removeBtn"
+                  src="/icons/buttonRemove.svg"
+                  alt="Remove"
+                />
+              </div>
+              <div className="cartItem d-flex align-center">
+                <div
+                  style={{
+                    backgroundImage: "url(../public/img/sneakers/puma.jpg)",
+                  }}
+                  className="cartItemImg"
+                ></div>
+                <div className="mr-20 flex">
+                  <p className="mb-5">Кроссовки Puma X Aka Boku Future Rider</p>
+                  <b>8 499 ₴</b>
+                </div>
+                <img
+                  className="removeBtn"
+                  src="/icons/buttonRemove.svg"
+                  alt="Remove"
+                />
+              </div>
+            </div>
+
+            <div className="cartTotalBlock">
+              <ul>
+                <li>
+                  <span>Разом:</span>
+                  <div></div>
+                  <b>21 498 ₴</b>
+                </li>
+                <li>
+                  <span>Налог 5%:</span>
+                  <div></div>
+                  <b>1074 ₴</b>
+                </li>
+              </ul>
+              <button className="greenButton">
+                Оформити замовлення
+                <img src="/icons/arrow.svg" alt="Arrow" />
+              </button>
+            </div>
+          </div>
+        </div>
+
         <header className="d-flex justify-between align-center p-40">
           <div className="d-flex align-center">
             <img src="/img/headerLogo.png" width={40} height={40} />
@@ -32,101 +103,7 @@ function App() {
           </div>
 
           <div className="d-flex">
-            <div className="card">
-              <div className="favorite">
-                <img src="/icons/buttonHeart.svg" alt="Unliked" />
-              </div>
-              <img
-                src="/img/sneakers/nikeBlazerGreen.jpg"
-                alt="Sneakers"
-                width={133}
-                height={112}
-              />
-              <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
-              <div className="d-flex justify-between align-center">
-                <div className="d-flex flex-column">
-                  <span>Ціна:</span>
-                  <b>12 999 ₴</b>
-                </div>
-                <button className="button">
-                  <img
-                    src="/icons/plus.svg"
-                    alt="Plus"
-                    width={11}
-                    height={11}
-                  />
-                </button>
-              </div>
-            </div>
-            <div className="card">
-              <img
-                src="/img/sneakers/nikeAirMax270.jpg"
-                alt="Sneakers"
-                width={133}
-                height={112}
-              />
-              <h5>Мужские Кроссовки Nike Air Max 270</h5>
-              <div className="d-flex justify-between align-center">
-                <div className="d-flex flex-column">
-                  <span>Ціна:</span>
-                  <b>12 999 ₴</b>
-                </div>
-                <button className="button">
-                  <img
-                    src="/icons/plus.svg"
-                    alt="Plus"
-                    width={11}
-                    height={11}
-                  />
-                </button>
-              </div>
-            </div>
-            <div className="card">
-              <img
-                src="/img/sneakers/nikeBlazerWhite.jpg"
-                alt="Sneakers"
-                width={133}
-                height={112}
-              />
-              <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
-              <div className="d-flex justify-between align-center">
-                <div className="d-flex flex-column">
-                  <span>Ціна:</span>
-                  <b>8 499 ₴</b>
-                </div>
-                <button className="button">
-                  <img
-                    src="/icons/plus.svg"
-                    alt="Plus"
-                    width={11}
-                    height={11}
-                  />
-                </button>
-              </div>
-            </div>
-            <div className="card">
-              <img
-                src="/img/sneakers/puma.jpg"
-                alt="Sneakers"
-                width={133}
-                height={112}
-              />
-              <h5>Кроссовки Puma X Aka Boku Future Rider</h5>
-              <div className="d-flex justify-between align-center">
-                <div className="d-flex flex-column">
-                  <span>Ціна:</span>
-                  <b>8 999 ₴</b>
-                </div>
-                <button className="button">
-                  <img
-                    src="/icons/plus.svg"
-                    alt="Plus"
-                    width={11}
-                    height={11}
-                  />
-                </button>
-              </div>
-            </div>
+            <Card></Card>
           </div>
         </div>
       </div>
