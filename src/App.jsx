@@ -23,9 +23,19 @@ function App() {
           </ul>
         </header>
         <div className="content p-40">
-          <h1 className="mb-40">Всі кросівки</h1>
+          <div className="d-flex align-center justify-between mb-40">
+            <h1>Всі кросівки</h1>
+            <div className="search-block d-flex">
+              <img src="/icons/search.svg" alt="Search" />
+              <input placeholder="Пошук..." />
+            </div>
+          </div>
+
           <div className="d-flex">
             <div className="card">
+              <div className="favorite">
+                <img src="/icons/buttonHeart.svg" alt="Unliked" />
+              </div>
               <img
                 src="/img/sneakers/nikeBlazerGreen.jpg"
                 alt="Sneakers"
@@ -55,7 +65,7 @@ function App() {
                 width={133}
                 height={112}
               />
-              <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
+              <h5>Мужские Кроссовки Nike Air Max 270</h5>
               <div className="d-flex justify-between align-center">
                 <div className="d-flex flex-column">
                   <span>Ціна:</span>
@@ -82,7 +92,7 @@ function App() {
               <div className="d-flex justify-between align-center">
                 <div className="d-flex flex-column">
                   <span>Ціна:</span>
-                  <b>12 999 ₴</b>
+                  <b>8 499 ₴</b>
                 </div>
                 <button className="button">
                   <img
@@ -101,11 +111,11 @@ function App() {
                 width={133}
                 height={112}
               />
-              <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
+              <h5>Кроссовки Puma X Aka Boku Future Rider</h5>
               <div className="d-flex justify-between align-center">
                 <div className="d-flex flex-column">
                   <span>Ціна:</span>
-                  <b>12 999 ₴</b>
+                  <b>8 999 ₴</b>
                 </div>
                 <button className="button">
                   <img
