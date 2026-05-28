@@ -1,23 +1,19 @@
+import styles from "./Card.module.scss";
 export default Card;
-function Card() {
+function Card(props) {
   return (
-    <div className="card">
-      <div className="favorite">
+    <div className={styles.card}>
+      <div className={styles.favorite}>
         <img src="/icons/buttonHeart.svg" alt="Unliked" />
       </div>
-      <img
-        src="/img/sneakers/nikeBlazerGreen.jpg"
-        alt="Sneakers"
-        width={133}
-        height={112}
-      />
-      <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
+      <img src={props.imageUrl} alt="Sneakers" width={133} height={112} />
+      <h5>{props.title}</h5>
       <div className="d-flex justify-between align-center">
         <div className="d-flex flex-column">
           <span>Ціна:</span>
-          <b>12 999 ₴</b>
+          <b>{props.price}</b>
         </div>
-        <button className="button">
+        <button className={styles.button}>
           <img src="/icons/plus.svg" alt="Plus" width={11} height={11} />
         </button>
       </div>

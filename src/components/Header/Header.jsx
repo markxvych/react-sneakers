@@ -1,3 +1,4 @@
+import styles from "./Header.module.scss";
 export default Header;
 function Header() {
   return (

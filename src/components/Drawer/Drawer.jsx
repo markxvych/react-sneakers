@@ -1,31 +1,31 @@
+import styles from "./Drawer.module.scss";
 export default Drawer;
 function Drawer() {
   return (
-    <div style={{ display: "none" }} className="overlay">
-      <div className="drawer">
+    <div className={styles.overlay}>
+      <div className={styles.drawer}>
         <h2 className="mb-30 d-flex justify-between cu-p">
           Корзина
           <img
-            className="removeBtn"
+            className={styles.removeBtn}
             src="/icons/buttonRemove.svg"
             alt="Remove"
           />
         </h2>
-        <div className="items">
+        <div className={styles.items}>
           <div className="cartItem d-flex align-center mb-20">
             <div
               style={{
-                backgroundImage:
-                  "url(../public/img/sneakers/nikeAirMax270.jpg)",
+                backgroundImage: "url(/img/sneakers/nikeAirMax270.jpg)",
               }}
-              className="cartItemImg"
+              className={styles.cartItemImg}
             ></div>
             <div className="mr-20 flex">
               <p className="mb-5">Мужские Кроссовки Nike Air Max 270</p>
               <b>12 999 ₴</b>
             </div>
             <img
-              className="removeBtn"
+              className={styles.removeBtn}
               src="/icons/buttonRemove.svg"
               alt="Remove"
             />
@@ -33,23 +33,23 @@ function Drawer() {
           <div className="cartItem d-flex align-center">
             <div
               style={{
-                backgroundImage: "url(../public/img/sneakers/puma.jpg)",
+                backgroundImage: "url(/img/sneakers/puma.jpg)",
               }}
-              className="cartItemImg"
+              className={styles.cartItemImg}
             ></div>
             <div className="mr-20 flex">
               <p className="mb-5">Кроссовки Puma X Aka Boku Future Rider</p>
               <b>8 499 ₴</b>
             </div>
             <img
-              className="removeBtn"
+              className={styles.removeBtn}
               src="/icons/buttonRemove.svg"
               alt="Remove"
             />
           </div>
         </div>
 
-        <div className="cartTotalBlock">
+        <div className={styles.cartTotalBlock}>
           <ul>
             <li>
               <span>Разом:</span>
@@ -62,7 +62,7 @@ function Drawer() {
               <b>1074 ₴</b>
             </li>
           </ul>
-          <button className="greenButton">
+          <button className={styles.greenButton}>
             Оформити замовлення
             <img src="/icons/arrow.svg" alt="Arrow" />
           </button>
